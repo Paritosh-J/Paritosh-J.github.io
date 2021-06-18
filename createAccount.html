@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>shopaholic - Create Account</title>
+  </head>
+
+  <link rel="icon" href="./titlebar_image.png" type="image/x-icon" />
+  <link rel="stylesheet" href="./shopaholicCSS.css" />
+
+  <a href="./index.html" style="text-decoration: none"
+    ><center id="shopaholic">shopaholic</center></a
+  >
+  <body class="signIn">
+    <img
+      src="./titlebar_image.png"
+      alt=""
+      style="width: 150px; padding: 5px; margin-top: 10px"
+    />
+    <form action="" name="createAccount" id="formBackground">
+      Name <br />
+      <input type="text" name="customerName" required /> <br />
+      <br />
+      Contact No. <br />
+      <input type="number" required /> <br />
+      <br />
+      Email <br />
+      <input type="email" name="customerEmail" required /> <br />
+      <br />
+      Date Of Birth <br />
+      <input type="date" /> <br />
+      <br />
+      Password <br />
+      <input
+        type="password"
+        name="customerPassword"
+        placeholder="At least 6 characters"
+        required
+      />
+      <br />
+      <br />
+      Retype Password <br />
+      <input type="password" name="customerPassword2" required /> <br />
+      <br />
+      <input
+        type="submit"
+        id="buttonSignIn"
+        value="Continue"
+        required
+        onclick="formValidator()"
+      />
+    </form>
+    <script>
+      function formValidator() {
+        if (
+          document.createAccount.customerPassword !=
+          document.createAccount.customerPassword2
+        )
+          alert("Passwords not matching");
+      }
+    </script>
+  </body>
+</html>
